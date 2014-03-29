@@ -1,0 +1,63 @@
+.profile-block {
+    padding: 6.5em 0 1.5em;
+    background: #F6F9FD;
+    position: relative;
+    text-align: center;
+    &:before {
+        @include content;
+        width: 100%;
+        bottom:0;
+        background: #A2D7E8;
+        left:0;
+        height: 40%;
+    }
+    img {
+        position: relative;
+        z-index: 4;
+        @include size( 6em );
+        margin: 0 auto .75em;
+        border:6px solid white;
+        max-width: none;
+        border-radius:50%;}
+    span {
+        z-index: 6;
+        font-weight: bold;
+        position: relative;
+        color:white;
+        display: block;
+        &.f-name {
+             color:white !important;
+             font-size: em(18);
+             font-weight: bold;}
+        &.l-place {
+              color: white;
+              font-size: em(14);}
+    }
+}
+
+
+ul.meta-data {
+     @include clearfix;
+     li {
+       text-align: center;
+       float:left;
+       font-size: em(14);
+       width: 25%;
+       margin: 0 0 1em 0;
+
+       a {
+          color:$light-gray;
+       }
+
+
+
+       span {
+          line-height: 1;
+
+          display: block;
+       }
+       
+       
+   }
+
+}

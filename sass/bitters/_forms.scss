@@ -1,0 +1,292 @@
+$form-border-color: darken( $marine1, 22%);
+$form-border-color-hover: lighten(#548B9F, 10%) ;
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: 0 0 0 1px rgba( #fff, .45) ;
+$form-box-shadow: 0 0 4px 0  #BDDAE4 ;
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+@mixin showHelp {
+  opacity:1;
+  z-index: 800;
+  top: 90px;
+  @include media( $desktop-screen ) {
+      top: -5px;
+      left: auto;
+      right: -260px;}
+  }
+
+
+form {
+   background: #EEF4F6;
+   border-radius:2px;
+   padding: 1.25em ;
+   border:1px solid darken(#EEF4F6, 6%);
+
+   .mb {
+       position: relative;
+       margin-bottom: 1.875em;
+       .field-help {
+            position: absolute;
+            top:110px;
+            @include transition ( all .25s linear );
+            width: em(200);
+            background: #3A4A50;
+            color:white;
+            z-index: -200;
+            opacity:0;
+            margin-left: -100px;
+            border-radius: em(4);
+            padding: em(16);
+            font-size: em(16);
+            left:50%;
+            &:before {
+               @include content;
+               top:-16px;
+               z-index: 800;
+               left:50%;
+               margin-left: -10px;
+               // margin-top: -10px;
+               @include triangle( 20px,  #3A4A50, up );}
+
+              @include media( $desktop-screen ) {
+                    top:-5px;
+                    left:auto;
+                    right: -280px;
+                    width: em(200);
+                    &:before {
+                        top:50%;
+                        left:-10px;
+                        margin-top: -10px;
+                        @include triangle( 20px, #3A4A50, left );}    
+                    
+                  }
+       }
+
+   }
+}
+
+form header {
+    margin-bottom: .75em;}
+
+
+fieldset {
+  padding: 1.25em 1.25em 0 ;
+  background:  darken(#EEF4F6, 2%);
+  @include box-shadow( inset 0 2px 2px 0 rgba(black, .02) );
+  border:0;
+  margin: 0 0 ($base-line-height / 2) 0;
+
+  header h3 {
+    line-height: em(22);
+    span {
+      border-radius:50%;
+      color:white;
+      @include inline-block;
+      text-align: center;
+      margin-right: em(10);
+      background: darken(#EEF4F6, 22%);;
+      @include size( em(22) );
+    }
+  }
+}
+
+
+input,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+}
+
+label,
+.upload em {
+  font-weight: 600;
+  color: darken(#EEF4F6, 36%);
+  margin-bottom: $base-line-height / 3;
+  
+}
+
+form li {
+  margin-bottom: $base-line-height * 1.5;
+  &:last-child { margin-bottom: 0; }
+}
+
+textarea,
+#{$all-text-inputs} {
+  position: relative;
+  background: darken(#EEF4F6, 7%);
+  border:0;
+  border-radius:em(3);
+  outline:0;
+  @include box-shadow( inset 0 1px 1px rgba(black, 0.03) );
+  color:darken(#EEF4F6, 48%);
+  @include transition ( background .75s ease );
+  padding: ($base-line-height / 1.5) ($base-line-height / 3);
+  width: 100%;
+  @include placeholder { font-weight:600; color: darken( #EEF4F6, 14%);  }
+
+  &:focus {
+    @include placeholder { opacity:0; }
+    background: darken(#EEF4F6, 14%);
+    outline: 0;}
+
+  &:focus ~ span {
+    @include showHelp;
+   }
+}
+
+input[type="search"] {
+  @include appearance(searchfield);}
+
+input[type="radio"],
+input[type="checkbox"] {
+     display: none;}
+
+
+.upload {
+  background: none;
+  z-index: 4;
+  border-radius:em(3);
+  @include transition ( border .75a ease );
+  border:2px dashed darken(#EEF4F6, 9%);
+  cursor:pointer !important;
+  pointer-events:auto;
+  position: relative;
+  @include size( 100% 52px);
+  &:before,
+  &:after {
+      width: 10px;
+      top:50%;
+      z-index: 1000;
+      left:4%;
+      height: 2px;
+      background: darken(#EEF4F6, 9%);
+      // background: red;
+      @include content;}
+
+  &:before {
+      margin-top: -1px;}
+
+  &:after {
+    margin-top: -1px;
+    @include transform( rotate(90deg));}
+
+  &:hover {
+    border-color: darken(#EEF4F6, 11%);}
+
+  &:hover ~ span {
+    @include showHelp;}
+  
+  em {
+      font-style: normal;
+      border-radius:em(22);
+      background: #9CB8C2;
+      color:white;
+      font-size: em(14);
+      padding: .5em 1.25em;
+      @include inline-block;
+      top:em(11);
+      position:absolute;
+      line-height:1;
+      right:4%;
+      &:hover { cursor:pointer; }
+    }
+
+  input[type="file"] {
+      opacity:0;
+      z-index: 18;
+      position: absolute;
+      top:0;
+      left:0;
+      @include appearance( none );
+      width: 100%;
+      @include size( 100% 52px );}
+    
+}
+
+
+
+textarea {
+  min-height: 10em;
+  height: 10em;}
+
+button {
+  border:0;
+  font-size: em(14);
+  outline:0;
+  @include transition ( all .15s ease );
+  display: block;
+  border-radius:em(3);
+  cursor:pointer;
+  padding: 1em 2.5em;
+  color: #548B9F;
+  background: none;
+  @include appearance( none );
+} 
+
+
+input[type="submit"] {
+  border:0;
+  outline:0;
+ @include inline-block;
+  width: auto;
+  margin: 1.5em 0  .75em;
+  @include transition ( all .3s ease );
+  cursor: pointer;
+  user-select: none;
+  background: lighten(#2BA6CC, 20%);
+  font-weight: bold;
+  color:white;
+  padding: .875em 3em;
+  border-radius:3px;
+  &:hover {
+      background: darken($marine1, 20%);}
+}
+
+
+/*================================================================
+
+// TAN WRAPPER SECTION
+
+=================================================================*/
+
+.tab-wrapper {
+     margin-top: 1em;
+     label {
+       border-radius: 50%;
+       position: relative;
+       text-align: center;
+       cursor: pointer;
+       margin: 0 1em 0 0;
+       @include transition ( all .15s linear );
+       line-height: em(64);
+       @include size( em(64) );
+       border:1px dashed darken(#D7E5EA, 24%);
+       @include inline-block;
+       border-radius:50%;
+
+         // &:hover,
+         // &:focus {
+         //    background: darken(#D7E5EA, 18%);
+         //    border-color:darken(#D7E5EA, 18%);
+         // }
+
+       span {
+           position: relative;
+           top:150px;
+           line-height: 1;
+           @include size(em(34));
+           @include inline-block;
+       }
+     }
+}
+
+
+
+
+
+

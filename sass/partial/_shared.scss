@@ -1,0 +1,82 @@
+.has-shadow {
+	box-shadow: 0 1px 1px rgba(black, .09);
+	background: white;}
+
+.has-drop {
+	box-shadow: 0 12px 26px rgba(black, .15);
+	background: white;
+}
+
+
+.cancel {
+	font-weight: bold;}
+
+
+
+/*------------------------------------
+     
+     CONTENTS AND PROFILE SHARED
+   
+------------------------------------*/
+
+.unit {
+	border-radius:4px;
+    @extend .has-shadow;
+    
+    header,footer {
+         position: relative;}
+
+    header {
+         padding: em(10) em(10) 0;}
+   
+    
+    footer {
+         background: #F6F9FD;
+ 	     border-top:3px solid darken(#F6F9FD, 2%);
+ 	     border-radius:4px;
+	     padding: em(10);
+    	 @include clearfix;}
+
+
+
+
+}
+
+.contents-control {
+	@include clearfix;}
+
+
+
+
+
+
+
+
+
+
+.login,
+.forgot-password {
+	display:none;
+	position: relative;}
+
+.activated {
+	display: block;}
+
+.forgot-password.fadeOut,
+.login.fadeOut {
+	@include animation ( fadeOut .25s ease forwards);}
+
+.forgot-password.fadeIn,
+.login.fadeIn {
+	display:block !important;
+	@include animation ( fadeIn .25s ease forwards);}
+
+
+@include keyframes( fadeOut ) {
+   0% { opacity:1; @include transform( translateX(0px) );}
+   100% { opacity:0; @include transform( translateX(-30px) );}}
+
+
+@include keyframes( fadeIn ) {
+   0% { opacity:0; @include transform( translateX(-30px) );}
+   100% { opacity:1; @include transform( translateX(0px) );}}

@@ -1,0 +1,74 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: 'Source Sans Pro', $helvetica;
+// $sans-serif: 'Raleway', $helvetica;
+$serif: $georgia;
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$dark-gray: #555555;
+$medium-gray: #B7B7B7;
+$light-gray: #DCDCDC;
+$light-gray: #C6C6C6;
+$light-gray: #CED8DB;
+$body:#E7EDEF;
+
+// Dolphin colors
+$marine1:#36D0FF;
+$marine2: #2D5D68;
+$marine-logo:darken($marine2, 6%);
+$marine10:shade($marine1, 10%);
+$marine-light:lighten($marine1, 20%);
+
+$ocean:#268094;
+$deepocean: #1D5F6E;
+$deepocean10: darken(#206A7B, 10%);
+$deepocean20: darken(#206A7B, 20%);
+$deepocean20: #08464F;
+$deepoceandesaturate: grayscale(#206A7B);
+$azur: desaturate(#46DDFA, 20%);
+$azurTint6: shade( $azur, 6% );
+$link: #30A1BB;
+
+
+$contents-type: darken($marine1, 20%);
+$contents-type-desat: #C2DEE7;
+
+$dark-corail: #8FBEA7;
+$light-corail: #26E8E2;
+
+
+// Dolphin colors
+$delete: #E06B6F;
+$delete-hover: #DF4B4E;
+
+// Body Color
+$base-body-color: white;
+$base-body-background:$body;
+
+//  Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $link;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Border color
+$base-border-color: rgba( #4F5B5F, .2);
+
+
+
+
+
+

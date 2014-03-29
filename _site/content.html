@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Always force latest IE rendering engine or request Chrome Frame -->
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+<title>login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+  <body>
+
+  <aside id="sidebar">
+         <div id="logo">
+		<h1 id ="logo-wrapper">
+			<a href="#">
+			  <!-- <span>Dolphin</span> -->
+			</a>
+		</h1>
+</div>
+         <nav id ="main-nav">
+  <ul>
+    <li class ="nav-list">
+      <a href="/users/profile">
+        <figure>
+          <img src="/img/profiles/avatar.jpg" alt="Jeff">
+          <!-- <figcaption>
+              Jeff Jeff
+          </figcaption> -->
+        </figure>
+      </a>
+    </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-dashboard" href="/dashboard" title ="dashboard">
+                <span class="nav-label">Dashboard</span>
+  	     	</a>
+  	     </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-branches" href="/branches" title ="branches">
+                <span class="nav-label">Branches</span>
+  	     	</a>
+  	     </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-contents" href="/contents" title ="contents">
+                <span class="nav-label">Contents</span>
+  	     	</a>
+  	     </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-beacons" href="/beacons" title ="beacons">
+                <span class="nav-label">Beacons</span>
+  	     	</a>
+  	     </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-customers" href="/customers" title ="customers">
+                <span class="nav-label">Customers</span>
+  	     	</a>
+  	     </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-settings" href="" title ="settings">
+                <span class="nav-label">Settings</span>
+  	     	</a>
+  	     </li>
+  	
+  	     
+  	     
+  	     <li class="nav-list">
+  	     	<a class ="btn btn-logout" href="" title ="logout">
+                <span class="nav-label">Logout</span>
+  	     	</a>
+  	     </li>
+  	
+  </ul>
+</nav>
+   
+  </aside>
+
+  <div id="wrapper">
+
+      <!-- <a href="#" id ="toggle"></a> -->
+
+      <div id="main">
+
+      <header role ="banner" id ="main-header">
+             
+             <div class="container">
+              
+                    <div  id ="header-profile">
+                         <p class ="user-profile">
+                             Welcome, <a href="#" class ="profile-name">Jeff</a>
+                             <a href="#" id ="toggle-user-settings"></a>
+                             
+                              <div id="user-settings">
+                                <ul id ="header-settings">
+                                    <li><a href="/profile" class ="profile-settings"><span>Profile</span></a></li>
+                                    <li><a href="/logout" class ="profile-logout"><span>Sign out</span></a></li>
+                                </ul>
+                              </div>
+
+                         </p>
+                    </div>
+
+
+                 
+
+               </div>
+
+         
+      </header>
+
+
+           
+
+       
+         
+         
+  
+  	
+
+  	
+
+  
+
+
+
+  
+
+  
+  
+
+  
+
+    
+
+
+
+  
+  <section>
+
+	
+    <form action="/" mehtod ="post">
+        
+        <h2>New content</h2>
+    	
+    	<ul>
+    		
+    		<li>
+    			<label for="title">Title</label>
+    			<input type="title" name="title" id="title" required placeholder="Title">
+    		</li>
+
+            <li>
+                <label for="content-type">Content Type</label> 
+                <select name="content--type" id="content-type">
+                    <option value="placeholder">Please choose...</option>
+                    <option value="content-image">image</option>
+                    <option value="content-video">video</option>
+                    <option value="content-coupon">coupon</option>
+                    <option value="content-url">url</option>
+                </select>
+
+                <div class="select-menu">
+                    
+                    <div class="selected-menu">
+                        <a href="#">Please choose...</a>
+                    </div>
+
+                    <ul>
+                        <li><a href="#">Please choose</a></li>
+                        <li><a href="#">image</a></li>
+                        <li><a href="#">video</a></li>
+                        <li><a href="#">coupon</a></li>
+                        <li><a href="#">url</a></li>
+                    </ul>
+                </div>
+            </li>
+    
+    		<li>
+    			<label for="description">Description</label>
+    			<textarea id="description" name="description" id="description"></textarea>
+    		</li>
+
+            <li>
+                <label for="notification-message">Notification Message</label>
+                <textarea name="notification-message" id="notification-message"></textarea>
+            </li>
+    
+    	</ul>
+
+        <ul id="placeholder" class ="content-type visible">
+            <li></li>
+        </ul>
+
+        <ul class="content-type" id ="content-image">
+
+            <li>
+                <label for="content-image">Image</label>
+                <input type="file" name="content-image" id="content-image" required>
+            </li>
+
+            <li>
+                <input type="submit" id ="content-image-submit" name ="content-image-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+
+
+        <ul class="content-type" id ="content-video">
+
+            <li>
+                <label for="content-video-image">Image</label>
+                <input type="file" name="content-video-image" id="content-video-image" required>
+            </li>
+            
+            <li>
+                <label for="content-video">Video</label>
+                <input type="url" name="content-video" id="content-video" required>
+            </li>
+            
+            <li>
+                <input type="submit" id ="content-video-submit" name ="content-video-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+
+        <ul class="content-type" id ="content-coupon">
+            
+            <li>
+                <label for="coupon">Coupon</label>
+                <input type="number" name="coupon" id="coupon" required>
+            </li>
+
+            <li>
+                <label for="coupon-image">Image</label>
+                <input type="file" name="coupon-image" id="coupon-image">
+            </li>
+
+            <li>
+                <input type="submit" id ="content-image-submit" name ="content-image-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+
+        <ul class="content-type" id="content-url">
+            
+            <li>
+                <label for="content-url">Url</label>
+                <input type="url" name="content-url" id="content-url" required>
+            </li>
+
+            <li>
+                <label for="content-url-caption">Caption</label>
+                <input type="text" name="content-url-caption" id="content-url-caption">
+            </li>
+
+            <li>
+                <input type="submit" id ="content-url-submit" name ="content-url-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+    
+    </form>
+
+</section>
+
+
+
+
+
+
+
+
+        </div> <!-- end main  -->
+     </div><!-- End wrapper -->
+
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="/javascript/app.js"></script>
+  <script src="/javascript/helper.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost')
+.split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>
+

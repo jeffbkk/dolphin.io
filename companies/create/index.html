@@ -1,0 +1,96 @@
+---
+title: Create a New Company
+layout: default
+---
+
+<section class="title">
+    <div class="container">
+        <div class="row">
+            <h1>{{ page.title }}</h1>
+        </div>
+    </div>
+</section>
+
+<section class ="main-content">
+
+    <div class="container">
+
+    <div class="form-container">
+     
+    <form action="/" mehtod ="post">
+    
+        <fieldset>
+          <header>
+            <h3>
+              <span>1</span>
+              Lorem ipsum dolor sit amet.
+            </h3>
+          </header>
+          <div class="row">
+            <div class="grid-12 mb">
+                <label for="company-name">Company Name</label>
+                <input type="text" name="company-name" id="title" required placeholder="Company name">
+                <span class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="grid-6 mb">
+                 <label for="image">image to upload</label>
+                 <div class="upload">
+                     <em>Select a File</em>
+                     <div class="hidden">
+                         <input type="file" name="image-upload" class="image-upload">
+                         <span class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod.</span>
+                     </div>
+                 </div>
+             </div>
+
+              <div class="grid-6 mb">
+                 <label for="image">image to upload</label>
+                 <div class="upload">
+                     <em>Select a File</em>
+                     <div class="hidden">
+                         <input type="file" name="image-upload" class="image-upload">
+                         <span class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod.</span>
+                     </div>
+                 </div>
+              </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <header>
+            <h3>
+              <span>2</span>
+              Lorem ipsum dolor sit amet.
+            </h3>
+          </header>
+          <div class="row">
+            <div class ="grid-12 mb">
+                <label for="company-description">Description</label>
+                <textarea id="company-description" name="company-description" id="company-description"></textarea>
+                 <span class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</span>
+            </div>
+          </div>
+
+        </fieldset>
+        
+        <fieldset>
+
+          <div class="row">
+             <div class="grid-12 mb">
+               <input type="submit" class ="submit" value="Create"> or <a href="#" class ="cancel"> Back previous page</a>
+             </div>
+          </div>
+
+        </fieldset>
+
+    </form>
+
+    </div>
+
+    </div>
+
+</section>

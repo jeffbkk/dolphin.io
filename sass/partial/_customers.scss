@@ -1,0 +1,36 @@
+#customers-listing-wrapper {
+    
+    header {
+       font-weight: bold;
+    }
+
+    ul {
+       @include clearfix;
+       li.name {
+       	  @include span-columns( 7,15 );
+       }
+
+       li.last-seen {
+       	  @include span-columns( 4,15 );
+       }
+
+       li.action {
+       	 @include span-columns( 4,15 );
+       }
+    }
+
+
+
+    ol#customers-listing {
+
+       li {
+       	  @include clearfix;
+       	  padding: .75em;
+       	  @extend .has-shadow;
+       	  border-radius:3px;
+
+
+       }
+
+    }
+}

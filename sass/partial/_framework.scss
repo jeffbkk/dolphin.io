@@ -1,0 +1,194 @@
+/*---------------------------------------------------------
+
+// GRID
+
+-----------------------------------------------------------*/
+
+.grid-3,
+.grid-4,
+.grid-6,
+.grid-6-8,
+.grid-6-offset-3,
+.grid-8,
+.grid-12 {
+    width: 100%;
+    [role="contentinfo"] &,
+    #services & {
+    	 margin-bottom: $base-line-height *  2.5;
+    }
+}
+
+@include media( $small-screen ) {
+     .grid-2 {
+         @include span-columns( 3 of 6 );
+         @include omega( 2n );}
+}
+
+@include media( $desktop-screen ) {
+
+   .grid-2 {
+       @include span-columns( 3, 10 );
+       @include omega-reset(2n,10);
+       @include omega( 3n );}
+
+   .grid-3 {
+   	  @include omega( 4n );
+   	  @include span-columns( 3,10 );}
+
+   .grid-4 {
+   	  margin-bottom: 0;
+   	  @include span-columns( 4,10 );}
+
+    .grid-5 {
+       @include span-columns( 5,10 );}
+
+    .grid-6 {
+   	  @include span-columns( 5,10 );
+   	  @include omega( 2n );}
+
+     // .grid-6-offset-3 {
+     //    @include span-columns( 5,10 );
+     //    @include shift( 2 );}
+
+
+     .form-container {
+        // @include shift( 1 );
+        @include span-columns( 8,10 );}
+
+}
+
+@include media( $large-screen ){
+
+   .grid-2{
+        @include span-columns( 3,12 );
+        @include omega-reset(2n,12);
+        @include omega-reset(3n,12);
+        @include omega( 4n );}
+
+    .grid-6 {
+        @include span-columns( 6,12 );
+        @include omega-reset(2n,12);
+        @include omega( 2n );}
+
+
+    .grid-8-offset4 {
+        @include shift( 2 );
+        @include span-columns( 8,12 );
+    }
+
+    .grid-12 {
+        @include fill-parent;}
+
+    .form-container {
+        @include shift( 0 );
+        @include span-columns( 9,12 );
+       
+      }
+}
+
+@include media( $wide-screen ){
+
+    .grid-2{
+         @include span-columns( 2,12 );
+         @include omega-reset(2n,12);
+         @include omega-reset(3n,12);
+         @include omega-reset(4n,12);
+         @include omega( 6n );}
+
+
+     .form-container {
+         @include span-columns( 7,12 );}
+
+
+     .grid-8 {
+         @include span-columns( 8,12 );}
+
+     .grid-9 {
+         @include span-columns( 9,12 );}
+
+     .grid-5 {
+         @include span-columns( 5,12 );}
+
+     .grid-10 {
+         @include span-columns( 10,12 );}
+
+}
+
+
+.row {
+  @include row( block );}
+
+/*---------------------------------------------------------
+
+// SECTION
+
+-----------------------------------------------------------*/
+
+section,
+[role="banner"],
+[role="contentinfo"] {
+    overflow: hidden;
+	  position: relative;
+	  @include clearfix;
+	  width: 100%;}
+
+[role="banner"] {
+	  overflow: visible;}
+
+
+section {
+      padding: 1.5em 0;
+	@include clearfix;
+      &.empty {
+           text-align: center;
+           padding: 3em 0;}
+      &.title  {
+           padding: 1em 0;
+           // background:#164453;
+           // border-top:1px solid rgba(white, .65);
+           // border-bottom:6px solid darken($marine1, 44%); 
+
+           h1 {
+              color: white !important;
+           }
+      }
+}
+
+#wrapper {
+	overflow: hidden;
+	position: relative;
+	z-index: 400;
+  height: 100%;
+	width: 100%;
+      #main {
+        // margin-left: 180px;
+        padding-bottom: 3em;
+        position: relative;
+      }
+}
+
+
+/*---------------------------------------------------------
+
+// CLASS CONTAINER
+
+-----------------------------------------------------------*/
+
+.container {
+	@include outer-container;
+	width: 88%;
+	max-width: 96%;
+	// padding: 0 0 1.5em ;
+      
+      @include media( $large-screen ){
+              width: 92%;
+      }
+        
+}
+
+
+
+
+
+
+

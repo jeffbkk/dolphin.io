@@ -1,0 +1,129 @@
+
+/*-----------------------------------------------------------------------------------------------
+ 
+   // CONTENTS OBJECT
+-------------------------------------------------------------------------------------------------*/
+.contents-items,
+.fadeinUp {
+	position: relative;
+	display:block;
+	top:0;
+	opacity:0;
+	@include transition ( top 300ms  cubic-bezier(.65, -1, .25, 2.5));
+	@include animation( fadeinUp 300ms  ease forwards );
+	margin-bottom: em(50);
+	&:hover {
+		cursor:pointer;
+		top:-.55em;}
+
+	&:hover .edit-contents:before {
+        color: #DEE7EA;}
+
+	&:nth-child(3n+3),
+	&:nth-child(5n+1) {
+		@include animation-duration( 500ms );
+	}
+}
+
+a.edit-contents {
+	position: absolute;
+	top:em(10);
+	line-height: 32px !important;
+	text-align: center;
+	border-radius:3px;
+	@include size( 32px );
+	right:em(10);
+
+	&:before { 
+        @include transition ( color .15s linear );
+		color:white; }
+}
+
+
+
+.contents-block {
+	text-align: center;
+    padding: 1.5em 0;
+	img {
+	    @include size(6em);
+	    margin: 0 auto .75em;
+	    max-width: none;
+	    border-radius:50%;}
+    
+	span {
+        display: block;
+        &.contents-owner {
+        	 font-size: em(18);
+        	 font-weight: bold;}
+        &.contents-place {
+        	  color: $light-gray;
+        	  font-size: em(14);
+        }
+    }
+}
+
+@include keyframes( fadeinUp ) {
+    0% {  opacity:0; @include transform( translateY(2.25em));}
+    100% {  opacity:1; @include transform( translateY(0));}
+}
+
+.contents-main {
+	@include transition ( all .25s ease-in-out );
+	border-radius:4px;
+	@extend .has-shadow;}
+          
+    .contents-title,
+    .contents-text {
+         padding: em(10) em(10) 0;}
+           
+.contents-text,
+.contents-control {
+	position: relative;
+	h2 {
+		display: block;
+		margin-bottom: .375em;
+	    font-size: 1.125em}
+}
+ .contents-control {
+ 	background: #F6F9FD;
+ 	border-top:3px solid darken(#F6F9FD, 2%);
+ 	border-radius:4px;
+	padding: em(10);
+}
+
+/*-----------------------------------------------------------------------------------------------
+ 
+   // CONTENTS LINK FOR INDICATES TYPE OF CONTENTS
+-------------------------------------------------------------------------------------------------*/
+
+.polaroid-icon {
+	background: url(../img/icon/polaroid.svg) ;}
+
+.video-icon {
+	background: url(../img/icon/video.svg) ;}
+
+.link-icon {
+	background: url(../img/icon/link.svg) ;}
+
+.coupon-icon {
+	background: url(../img/icon/coupon.svg) ;}
+
+.text-icon {
+	background: url(../img/icon/text.svg) ;}
+
+.icon-type {
+	border-radius:50%;
+	display: block;
+	color:desaturate($marine1, 45%);
+	background-color: #A2D7E8;
+	background-position: center center;
+	background-size: 18px auto;
+	background-repeat: no-repeat;
+	@include size( 30px );
+	span {
+		@include inline-block;
+		line-height:30px;
+        font-size: em(16);
+		padding-left: 36px;
+	}
+}

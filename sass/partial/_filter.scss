@@ -1,0 +1,41 @@
+.filter {
+	padding-bottom: em(6);
+    position: relative;
+	margin-bottom: 2rem;
+	margin-bottom: 2em;
+	p { display:none; }
+    #sort {
+    	@include display-box;
+    	li {
+    	   line-height: 22px;
+             @include box-flex( 1 );
+             text-align: center;
+    	   a {
+                color: darken(#CED4D5, 8%);
+                border-radius:em(18);
+                font-size: em(14);
+                background: darken(#E7EDEF, 3%);
+                padding: .25em .75em;
+                text-shadow: none;
+    		}
+    	}
+    }
+
+@include media( $medium-screen ) {
+    p { @include inline-block;  margin: 0 .75em 0 0;}
+    #sort {
+    	display: block;
+    	li {
+    	  line-height: auto;
+          @include box-flex( none );
+    	  margin-bottom: 0 !important;
+		  margin-right: 1rem;
+		  margin-right: 1em;
+		  @include inline-block;}
+    }
+}
+}
+
+
+
+

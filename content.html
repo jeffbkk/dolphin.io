@@ -1,0 +1,138 @@
+---
+title: login
+layout: default
+---
+
+<section>
+
+	
+    <form action="/" mehtod ="post">
+        
+        <h2>New content</h2>
+    	
+    	<ul>
+    		
+    		<li>
+    			<label for="title">Title</label>
+    			<input type="title" name="title" id="title" required placeholder="Title">
+    		</li>
+
+            <li>
+                <label for="content-type">Content Type</label> 
+                <select name="content--type" id="content-type">
+                    <option value="placeholder">Please choose...</option>
+                    <option value="content-image">image</option>
+                    <option value="content-video">video</option>
+                    <option value="content-coupon">coupon</option>
+                    <option value="content-url">url</option>
+                </select>
+
+                <div class="select-menu">
+                    
+                    <div class="selected-menu">
+                        <a href="#">Please choose...</a>
+                    </div>
+
+                    <ul>
+                        <li><a href="#">Please choose</a></li>
+                        <li><a href="#">image</a></li>
+                        <li><a href="#">video</a></li>
+                        <li><a href="#">coupon</a></li>
+                        <li><a href="#">url</a></li>
+                    </ul>
+                </div>
+            </li>
+    
+    		<li>
+    			<label for="description">Description</label>
+    			<textarea id="description" name="description" id="description"></textarea>
+    		</li>
+
+            <li>
+                <label for="notification-message">Notification Message</label>
+                <textarea name="notification-message" id="notification-message"></textarea>
+            </li>
+    
+    	</ul>
+
+        <ul id="placeholder" class ="content-type visible">
+            <li></li>
+        </ul>
+
+        <ul class="content-type" id ="content-image">
+
+            <li>
+                <label for="content-image">Image</label>
+                <input type="file" name="content-image" id="content-image" required>
+            </li>
+
+            <li>
+                <input type="submit" id ="content-image-submit" name ="content-image-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+
+
+        <ul class="content-type" id ="content-video">
+
+            <li>
+                <label for="content-video-image">Image</label>
+                <input type="file" name="content-video-image" id="content-video-image" required>
+            </li>
+            
+            <li>
+                <label for="content-video">Video</label>
+                <input type="url" name="content-video" id="content-video" required>
+            </li>
+            
+            <li>
+                <input type="submit" id ="content-video-submit" name ="content-video-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+
+        <ul class="content-type" id ="content-coupon">
+            
+            <li>
+                <label for="coupon">Coupon</label>
+                <input type="number" name="coupon" id="coupon" required>
+            </li>
+
+            <li>
+                <label for="coupon-image">Image</label>
+                <input type="file" name="coupon-image" id="coupon-image">
+            </li>
+
+            <li>
+                <input type="submit" id ="content-image-submit" name ="content-image-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+
+        <ul class="content-type" id="content-url">
+            
+            <li>
+                <label for="content-url">Url</label>
+                <input type="url" name="content-url" id="content-url" required>
+            </li>
+
+            <li>
+                <label for="content-url-caption">Caption</label>
+                <input type="text" name="content-url-caption" id="content-url-caption">
+            </li>
+
+            <li>
+                <input type="submit" id ="content-url-submit" name ="content-url-submit" value="Create"> or <a href="#">cancel</a>
+            </li>
+
+        </ul>
+    
+    </form>
+
+</section>
+
+
+
+
+
+

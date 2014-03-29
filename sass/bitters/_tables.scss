@@ -1,0 +1,46 @@
+table {
+  border-collapse: collapse;
+  margin: ($base-line-height / 2) 0;
+  // table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  padding: ($base-line-height / 2) 0;
+  text-align: left;
+}
+
+td {
+  padding: ($base-line-height / 2) 0;
+}
+
+tr, td, th {
+  vertical-align: middle;
+}
+
+thead tr,
+tbody td.customer-name {
+  color:#AFBCBF;
+  font-weight: bold;
+}
+
+tbody tr {
+      margin-bottom: 1em;
+      td {
+       margin-bottom: 1em;
+       @extend .has-shadow;
+       
+
+
+     }
+
+
+}
+
+
+tbody figure {
+     @include size( 42px ); 
+     border-radius:em(2);
+     padding: em(4);
+}

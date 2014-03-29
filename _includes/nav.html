@@ -1,0 +1,26 @@
+<nav id ="main-nav">
+  <ul>
+    <li class ="nav-list">
+      <a href="/users/profile">
+        <figure>
+          <img src="/img/profiles/avatar.jpg" alt="Jeff">
+          <!-- <figcaption>
+              Jeff Jeff
+          </figcaption> -->
+        </figure>
+      </a>
+    </li>
+  	{% for link in site.navigation %}
+  	     {% assign current = nil %}
+  	     {% if page.url == link.url %}
+  	          {% assign current = "current" %}
+  	     {% endif %}
+  	     <li class="nav-list">
+  	     	<a class ="{{ link.class }}" href="{{ link.url }}" title ="{{ link.text }}">
+                <span class="nav-label">{{ link.text | capitalize }}</span>
+  	     	</a>
+  	     </li>
+  	{% endfor %}
+  </ul>
+</nav>
+   

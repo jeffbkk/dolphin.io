@@ -1,0 +1,58 @@
+a,
+a span {
+	 @include transition ( all .15s ease-in-out );}
+
+.content-img,
+.content-text {
+	@include transition ( all .25s ease-in-out );
+}
+
+#sidebar.open {
+
+}
+
+
+#main.open {
+	
+}
+
+
+#sidebar.narrow {
+
+}
+
+.main-content {
+	opacity:0;
+	@include transform( translateY(40px) );
+	@include animation( fadeIn .25s .34s linear forwards);}
+
+
+[role="banner"].visible {
+	opacity:1;
+	height: 144px;
+	z-index: 4000;}
+
+@include keyframes( fadeIn ) {
+    0% { opacity:0; @include transform( translateY(40px) );}
+    100% { opacity:1; @include transform( translateY(0) );}
+}
+
+@include keyframes( welcome ) {
+	0% {opacity:0; @include transform(scale( .4 ));} 
+	50% {opacity:0; @include transform(scale( .4 ));} 
+	82% {opacity:1; @include transform(scale( 1.08 ));} 
+	100% {@include transform(scale( 1 ));}}
+
+
+@include keyframes( fadeDown ) {
+	0% { opacity:0; @include transform(translateY( -20px ));}
+        100% { opacity:1; @include transform(translateY( 0 ));}}
+
+@include keyframes( fadeUp ) {
+	0% { opacity:0; @include transform(translateY( 20px ));}
+        100% { opacity:1; @include transform(translateY( 0 ));}}
+
+
+
+
+

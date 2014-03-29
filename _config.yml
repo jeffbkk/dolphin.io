@@ -1,0 +1,32 @@
+name: "Solidxpress"
+description: "Solidxpress"
+
+url: "http://localhost:4000"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: /blog/:year/:month/:day/:title
+
+navigation:
+    - text: dashboard
+      url: /dashboard
+      class: btn btn-dashboard
+    - text: branches
+      url: /branches
+      class: btn btn-branches
+    - text: contents
+      url: /contents
+      class: btn btn-contents
+    - text: beacons
+      url: /beacons 
+      class: btn btn-beacons
+    - text: customers
+      url: /customers
+      class: btn btn-customers
+    - text: settings
+      class: btn btn-settings
+    - text: logout
+      class: btn btn-logout 
+    
+

@@ -1,0 +1,79 @@
+.modal-backdrop {
+	opacity: 0;
+	top:0;
+	@include transition ( all .25s ease );
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	width: 100%;
+	z-index: -4;
+	height: 100%;
+	background: rgba(#131F23, .93);
+     
+    body.modal-open & {
+        z-index: 50000;    	
+    	opacity:1;}
+
+}
+
+.modal-dialog {
+	@include transition ( all .25s ease );
+	position: fixed;
+	background: #EBEFF1;
+	top:120px;
+	@include transform(translateY( -30px ));
+	margin-left: -360px;
+	width: 1000px;
+	max-width:720px; 
+    z-index: -2;
+	opacity:0;
+	left:50%;
+    
+    header {
+    	padding: $base-line-height;
+    	background: rgba(black, 0.02);
+    	@include clearfix;
+        
+        h5 {
+    	     float:left;}
+
+        .modal-close {
+        	 font-weight: bold;
+        	 color:#BDDAE4;
+        	 cursor: pointer;
+        	 display: block;
+        	 font-size: em(22);
+    	     @include transform( rotate(45deg));
+    	     float:right; }
+
+    }
+
+    footer {
+    	text-align: right;
+    	@include clearfix;
+        padding: $base-line-height;
+        ul li {
+        	margin: 0 0 0 2em;
+        	@include inline-block;
+
+        	&:first-child {
+        		margin: 0;
+        		float:left;
+        	}
+        }
+
+    }
+
+    body.modal-open & {
+	   opacity:1;
+	   @include transform(translateY( 0 ));
+       z-index: 400000;
+	}
+
+}
+
+
+
+
+

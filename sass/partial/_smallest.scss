@@ -1,0 +1,69 @@
+body {
+	background: $base-body-background;
+    background: $body;
+    font: 100%/1.5 'Source Sans Pro', $helvetica;
+    font-smooth: subpixel-antialiased;
+    -ms-overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    line-height: 1.5;}
+
+#login-logo,
+#login-form {
+    position: relative;
+    padding: 1em 0 !important;
+}
+
+ #login-logo  {
+ 	@include transition ( all .35s ease );
+    #login-dolphin-logo {
+         border:8px solid white;
+         @include animation( fadeUp .45s  ease-in );
+         @include box-shadow( 0 1px 2px rgba(black, 0.15 ));
+         @include transition ( background  width height .2s ease-in-out );
+         background: darken($marine1, 15%) url(../img/logo-s.png) no-repeat;
+         background-position: center center;
+         @include image-2x("../img/logo-s2x.png",248px, 248px);
+            margin:0 auto 0 auto;
+            @include size( em(124) );
+            border-radius:50%;
+         @include media( $medium-screen ){
+            border:9px solid white;
+            background: darken($marine1, 15%) url(../img/logo-b.png) no-repeat; 
+            background-position: center center;
+            @include image-2x("../img/logo-b2x.png",288px, 288px);
+            @include size( em(144) );}
+    }
+
+ }
+
+ #login-form {
+    #login-form-container {
+        position: relative;
+        @include animation( fadeDown .45s  ease-in );
+        max-width: 440px;
+        margin: 0 auto;
+        
+        header p {
+            margin: 1em 0 !important;
+        }
+       
+    }
+
+    #forgot, #back-to-login {
+        text-align: center;
+        margin-bottom: .75em;
+
+        &#forgot,
+        &#back-to-login {
+            font-weight: bold;
+            margin-top: 4em;
+            a {
+                color: #03B4EA!important;
+            }
+        }
+    }   
+
+ }
